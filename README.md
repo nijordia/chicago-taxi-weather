@@ -88,16 +88,28 @@ This creates:
 ### 3. Backfill weather data
 
 ```bash
+# Linux / macOS
 python scripts/backfill_weather.py \
     --project <YOUR_PROJECT_ID> \
     --start-date 2023-01-01 \
+    --end-date 2023-12-31
+
+# Windows (PowerShell)
+python .\scripts\backfill_weather.py `
+    --project <YOUR_PROJECT_ID> `
+    --start-date 2023-01-01 `
     --end-date 2023-12-31
 ```
 
 ### 4. Load taxi trip data
 
 ```bash
+# Linux / macOS
 python scripts/load_taxi_trips.py \
+    --project <YOUR_PROJECT_ID>
+
+# Windows (PowerShell)
+python .\scripts\load_taxi_trips.py `
     --project <YOUR_PROJECT_ID>
 ```
 
