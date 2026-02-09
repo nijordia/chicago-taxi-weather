@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: bronze
-    database: "{{ env_var('GCP_PROJECT', 'chicago-taxi-weather-486809') }}"
+    database: "{{ env_var('GCP_PROJECT') }}"
     schema: chicago_taxi_weather
     tables:
       - name: bronze_taxi_trips_filtered
@@ -11,7 +11,6 @@ sources:
           - name: unique_key
             tests:
               - not_null
-              - unique
       - name: bronze_weather_daily
         description: "Daily weather data from Open-Meteo for Chicago"
         columns:

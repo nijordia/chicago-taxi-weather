@@ -114,7 +114,6 @@ export GCP_PROJECT=<YOUR_PROJECT_ID>
 # Windows (PowerShell)
 $env:GCP_PROJECT="<YOUR_PROJECT_ID>"
 
-dbt deps
 dbt seed
 dbt run
 dbt test
