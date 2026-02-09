@@ -1,0 +1,11 @@
+chicago_taxi_weather:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT', 'chicago-taxi-weather-486809') }}"
+      dataset: chicago_taxi_weather
+      location: US
+      threads: 4
+      timeout_seconds: 300

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_taxi_trips
+    description: "Cleaned taxi trips with trip_date derived from trip_start_timestamp"
+    columns:
+      - name: unique_key
+        tests:
+          - not_null
+          - unique
+      - name: trip_date
+        tests:
+          - not_null
+
+  - name: stg_weather
+    description: "Cleaned weather data with standardized weather codes from seed"
+    columns:
+      - name: date
+        tests:
+          - not_null
+          - unique

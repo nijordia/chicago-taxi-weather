@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: taxi_weather_joined
+    description: "Taxi trips joined with daily weather data on trip_date"
+    columns:
+      - name: unique_key
+        tests:
+          - not_null
+          - unique
+      - name: trip_date
+        tests:
+          - not_null
+      - name: duration_minutes
+        tests:
+          - not_null
+
+  - name: agg_trip_duration_by_weather
+    description: "Aggregated trip duration metrics by date and weather conditions"
+    columns:
+      - name: trip_date
+        tests:
+          - not_null

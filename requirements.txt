@@ -1,0 +1,4 @@
+dbt-core==1.11.*
+dbt-bigquery==1.11.*
+google-cloud-bigquery==3.*
+requests==2.*

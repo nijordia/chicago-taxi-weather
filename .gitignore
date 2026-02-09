@@ -1,0 +1,32 @@
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*backup
+terraform/*.tfvars
+terraform/.terraform.lock.hcl
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/.user.yml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Cloud Function zip
+ingestion/function_source.zip
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI
+.claude

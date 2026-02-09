@@ -1,0 +1,24 @@
+name: chicago_taxi_weather
+version: "1.0.0"
+config-version: 2
+
+profile: chicago_taxi_weather
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+analysis-paths: ["analyses"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  chicago_taxi_weather:
+    staging:
+      +materialized: table
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts
